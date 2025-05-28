@@ -194,12 +194,3 @@ body {
 }
 
 /*verticle line*/
-.vertical-line {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 2px;
-    height: 500%;
-    background-color: #ff0000;
-    transform: translateX(-50%);
-}

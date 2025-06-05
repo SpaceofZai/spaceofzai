@@ -19,27 +19,37 @@ body {
 .starter-container {
     position: relative;
 }
-.logo h1, .logo img, .logo p {
-  position: absolute;
+.logo-wrap {
+    position: relative;
 }
-.title1, .title2 {
-    font-size: 75px;
+.starter-title_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 700px;
+    top: 350px;
+    left: 70px;
+
+    font-size: 50px;
     letter-spacing: 25px;
 }
-.title1 {
-  top: 315px;
-  left: 254px;
-}
-.title2 {
-  top: 315px;
-  left: 1170px;
-}
 .astro-img {
+    position: relative;
     width: 650px;
-    height: auto;
-    top: -70px;
+    top: -200px;
     left: 525px;
     animation: UpDown 5s infinite ease-in-out;
+}
+.main-disc {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 8px;
+}
+.main-p {
+    position: relative;
+    top: -350px;
 }
 @keyframes UpDown {
     0% {transform: translateY(0);}
@@ -48,95 +58,109 @@ body {
     75% {transform: translateY(20px);}
     100% {transform: translateY(0);}
 }
-.logo p {
-    font-size: 30px;
-    letter-spacing: 8px;
-    text-align: center;
-    width: 1493px;
-    height: 84px;
-    top: 729px;
-    left: 115px;
-}
 
 /*skills container*/
 .skills-container {
     position: relative;
+    top: -200px;
 }
-.skills-list h2, .skills-list h3, .skills-list img{
-    position: absolute;
+.skills-list_wrapper{
+    position: relative;
+    top: 100px;
 }
 .main-h1 {
     font-size: 55px;
     letter-spacing: 25px;
-    text-align: center;
-    width: 510px;
-    height: 65px;
-    top: 998px;
-    left: 600px;
+    text-align: center;    
 }
-.lang-1, .lang-2, .lang-3 {
+.small-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 300px;
+    top: 100px;
+    left: 200px;
+
     font-size: 35px;
     letter-spacing: 25px;
-    top: 1157px;
 }
-.lang-1 {
-    left: 200px;
-}
-.lang-2 {
-    left: 780px;
 
-}
-.lang-3 {
-    left: 1170px;
+.orbit-wrapper {
+  position: relative;
+  top: 250px;
+  width: 714px;
+  height: 714px;
+  margin: 0 auto;
 }
 .fullmoon-img {
-    width: 714px;
-    height: auto;
-    top: 1451px;
-    left: 481px;
-    animation: Spin 10s infinite ease-in-out;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 714px;
+  height: auto;
+  animation: Spin 10s linear infinite;
+}
+.orbit-center {
+  position: relative;
+  top: -50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  animation: Orbit 8s linear infinite;
+  transform-origin: center;
+}
+.rocket-img {
+  position: relative;
+  top: -550px; /* Distance from the moon's center (adjust orbit radius) */
+  left: -175px; /* Half of rocket width to center it */
+  width: 350px;
+  transform: rotate(-90deg);
+}
+/* animations */
+@keyframes Orbit {
+  0%   { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
 }
 @keyframes Spin {
     0% {transform: rotate(0deg);}
-    25% {transform: rotate(90deg);}
-    50% {transform: rotate(180deg);}
-    75% {transform: rotate(270deg);}
     100% {transform: rotate(360deg);}
 }
 .rect {
     position: absolute;
     background-color: black;
-    width: 608px;
-    height: 271px;
-    top: 1850px;
-    left: 535px;
+    width: 1000px;
+    height: 430px;
+    top: 730px;
+    left: 350px;
     border-radius: 0 0 265px 265px;
 }
 
 /*project container*/
 .project-container {
     position: relative;
+    top: -200px;
 }
-.past-projects h2, .past-projects img, .past-projects p {
+.past-projects_wrap {
     position: relative;
-}
-.main-h2 {
-    font-size: 55px;
-    letter-spacing: 25px;
-    width: 664px;
-    height: 65px;
-    top: 1902px;
+    top: 200px;
     left: 525px;
 }
-.planet-group1 {
+.main-h2 {
     position: relative;
-    top: 2020px;
-    left: 172px;
+    top: -20px;
+    font-size: 55px;
+    letter-spacing: 25px;
 }
-.planet-group2 {
+.planet-wrapper {
     position: relative;
-    top: 2220px;
-    left: 172px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 150px;
+
+    top: 130px;
+    left: -500px;
 }
 .planet_name-group1 {
     position: relative;
@@ -144,12 +168,11 @@ body {
     flex-direction: row;
     text-align: center;
     gap: 100px;
+    top: -730px;
+    left: -70px;
 
     font-size: 20px;
     letter-spacing: 25px;
-
-    top: 1570px;
-    left: 215px;
 }
 .planet_name-group2 {
     position: relative;
@@ -157,12 +180,11 @@ body {
     flex-direction: row;
     text-align: center;
     gap: 100px;
+    top: -585px;
+    left: 15px;
 
     font-size: 20px;
     letter-spacing: 25px;
-
-    top: 1925px;
-    left: 220px;
 }
 .project_name-group1 {
     position: relative;
@@ -170,25 +192,49 @@ body {
     flex-direction: row;
     text-align: center;
     gap: 100px;
+    top: -885px;
+    left: -340px;
 
     font-size: 20px;
     letter-spacing: 10px;
-    top: 1750px;
-    left: 230px;
 }
 
 /*social container*/
+.social-container {
+    position: relative;
+    top: -200px;
+}
+.socials-wrap {
+    position: relative;
+    top: 100px;
+    left: 600px;
+}
 .main-h3 {
     position: relative;
+    left: 100px;
+    align-items: center;
     font-size: 55px;
     letter-spacing: 25px;
-    width: 262px;
-    height: 65px;
-    top: 2170px;
-    left: 707px;
+}
+.social-main_wrapper {
+    position: relative;
+    top: 50px;
+    left: -500px;
+    animation: Scan 10s linear infinite;
+}
+.satilite-img {
+    width: 400px;
+}
+@keyframes Scan {
+    0% { transform: translateX(0px); }
+    25% { transform: translateX(500px); }
+    50% { transform: translateX(1000px); }
+    75% { transform: translateX(500px); }
+    100% { transform:translateX(0px); }
 }
 
 /*----------------------------------------------*/
+/*resize*/
 
 @media (max-width: 1200px) {
     /*starter content*/
@@ -309,4 +355,14 @@ body {
     width: 90%;
     margin: 20px auto;
   }
+}
+@media (max-width: 600px) {
+    .astro-img {
+        left: -10px;
+    }
+}
+@media (max-width: 400px) {
+    .astro-img {
+        width: 20px;
+    }
 }
